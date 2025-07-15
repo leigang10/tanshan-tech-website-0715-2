@@ -1,5 +1,10 @@
 /* 重置样式 */
 *{margin:0;padding:0;box-sizing:border-box}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 /* 页面加载动画 */
 .page-loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .5s ease}
 .page-loader.hidden{opacity:0;pointer-events:none}
@@ -18,6 +23,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* 头部导航 */
@@ -441,6 +448,7 @@ section {
         padding: 0 10px;
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
     }
     
     .nav-list {
@@ -466,6 +474,11 @@ section {
     
     .section-title {
         font-size: 2rem;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        text-align: center;
     }
     
     .services-grid {
@@ -552,6 +565,7 @@ section {
         padding: 0 8px;
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
     }
     
     .hero {
@@ -588,6 +602,11 @@ section {
     
     .section-title {
         font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        text-align: center;
     }
     
     .company-info h3 {
