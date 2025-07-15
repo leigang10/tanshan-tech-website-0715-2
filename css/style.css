@@ -189,6 +189,7 @@ section {
     width: 100%;
     height: 600px;
     object-fit: cover;
+    aspect-ratio: 1/2;
 }
 
 .service-title {
@@ -227,6 +228,7 @@ section {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    aspect-ratio: 1/2;
 }
 
 /* 合作伙伴 */
@@ -379,6 +381,7 @@ section {
     color: #666;
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .service-process {
@@ -435,7 +438,9 @@ section {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 100%;
     }
     
     .nav-list {
@@ -469,7 +474,8 @@ section {
     }
     
     .service-image {
-        height: 600px;
+        height: 400px;
+        aspect-ratio: 1/2;
     }
     
     .cases-grid {
@@ -478,7 +484,8 @@ section {
     }
     
     .case-image {
-        height: 600px;
+        height: 300px;
+        aspect-ratio: 1/2;
     }
     
     .partners-bg {
@@ -498,7 +505,7 @@ section {
     
     .partner-card {
         width: 100%;
-        height: 300px;
+        height: 200px;
     }
     
     .partner-image {
@@ -532,9 +539,21 @@ section {
         font-size: 1.1rem;
         max-width: 100%;
     }
+    
+    .advantages-content p,
+    .team-content p {
+        max-width: 100%;
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
     .hero {
         height: 300px;
     }
@@ -543,8 +562,20 @@ section {
         height: 300px;
     }
     
-    .partners-image {
+    .service-image {
         height: 300px;
+    }
+    
+    .case-image {
+        height: 200px;
+    }
+    
+    .partners-image {
+        height: 250px;
+    }
+    
+    .partner-card {
+        height: 150px;
     }
     
     .hero-title {
@@ -561,6 +592,12 @@ section {
     
     .company-info h3 {
         font-size: 1.5rem;
+    }
+    
+    .advantages-content p,
+    .team-content p {
+        max-width: 100%;
+        text-align: left;
     }
     
     .contact-item {
