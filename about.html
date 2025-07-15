@@ -9,7 +9,14 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tanshan.com.cn/about.html">
     <title>关于我们 - 北京探山科技有限公司</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 资源预加载 -->
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="images/about-hero.jpg" as="image">
+    
+    <!-- 备用CSS加载 -->
+    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
 </head>
 <body>
     <!-- 页面加载动画 -->
