@@ -10,20 +10,53 @@
     <link rel="canonical" href="https://tanshan.com.cn/about.html">
     <title>关于我们 - 北京探山科技有限公司</title>
     
-    <!-- 资源预加载 -->
-    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- 关键CSS内联 -->
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Microsoft YaHei','PingFang SC',Arial,sans-serif;line-height:1.6;color:#333;background:#fff}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:fixed;top:0;left:0;right:0;z-index:1000}
+    .nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
+    .logo-img{height:40px;width:auto;max-width:240px}
+    .nav-list{display:flex;list-style:none;gap:30px}
+    .nav-link{text-decoration:none;color:#333;font-weight:500;padding:10px 0;transition:color .3s ease}
+    .nav-link:hover,.nav-link.active{color:#007bff}
+    .about-hero{position:relative;height:600px;overflow:hidden;margin-top:70px}
+    .about-hero-bg{position:absolute;top:0;left:0;right:0;bottom:0}
+    .about-hero-image{width:100%;height:100%;object-fit:cover}
+    .about-hero-content{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;background:rgba(0,0,0,.4)}
+    .about-hero-title{font-size:3rem;font-weight:bold;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,.5);margin-bottom:30px}
+    .about-hero-desc{font-size:1.3rem;color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,.5);line-height:1.8;max-width:800px;margin:0 auto}
+    section{padding:80px 0}
+    .section-title{font-size:2.5rem;font-weight:bold;text-align:center;margin-bottom:20px;color:#333}
+    .advantages-content p,.team-content p{font-size:1.2rem;line-height:1.8;color:#666;max-width:800px;margin:0 auto}
+    .service-process{background:#f8f9fa}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:60px}
+    .process-step{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:transform .3s ease}
+    .process-step:hover{transform:translateY(-5px)}
+    .step-number{font-size:3rem;font-weight:bold;color:#007bff;margin-bottom:20px}
+    .step-title{font-size:1.5rem;font-weight:bold;margin-bottom:15px;color:#333}
+    .step-desc{color:#666;line-height:1.6}
+    .contact{background:#fff}
+    .contact-content{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:60px}
+    .company-info h3{font-size:2rem;font-weight:bold;margin-bottom:20px;color:#333}
+    .company-info p{font-size:1.2rem;color:#666;line-height:1.6}
+    .contact-details{display:flex;flex-direction:column;gap:20px}
+    .contact-item{display:flex;align-items:center;gap:10px}
+    .contact-label{font-weight:bold;color:#333;min-width:100px}
+    .contact-value{color:#007bff;font-size:1.1rem}
+    .footer{background:#333;color:#fff;text-align:center;padding:30px 0}
+    .lazy{opacity:0;transition:opacity .3s}
+    .lazy.loaded{opacity:1}
+    @media (max-width:768px){.container{padding:0 15px}.nav-list{display:none}.about-hero{height:600px}.about-hero-title{font-size:2rem;margin-bottom:20px}.about-hero-desc{font-size:1.1rem;max-width:100%}.process-grid{grid-template-columns:1fr;gap:20px}.contact-content{grid-template-columns:1fr;gap:40px}}
+    @media (max-width:480px){.about-hero-title{font-size:1.5rem}.section-title{font-size:1.5rem}.company-info h3{font-size:1.5rem}.contact-item{flex-direction:column;align-items:flex-start;gap:5px}}
+    </style>
+    
+    <!-- 预加载关键资源 -->
     <link rel="preload" href="images/logo.png" as="image">
     <link rel="preload" href="images/about-hero.jpg" as="image">
-    
-    <!-- 备用CSS加载 -->
-    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
 </head>
 <body>
-    <!-- 页面加载动画 -->
-    <div class="page-loader">
-        <div class="loader-spinner"></div>
-    </div>
-    
     <!-- 顶部导航 -->
     <header class="header">
         <div class="container">
@@ -60,8 +93,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- 第3模块 - 优势特点 -->
     <section class="advantages">
@@ -142,6 +173,20 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- 优化的JavaScript -->
+    <script>
+    // 移动端菜单
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
+        
+        if (mobileMenuToggle && navList) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+    });
+    </script>
 </body>
 </html> 
